@@ -1,0 +1,30 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=350
+
+Its really irksome when your compiler
+complains for any unmatched "{" or "(" or "[".
+With this plugin you can highlight all
+those unmatched "{" or "("  or  "[" as you type.
+This helps you to keep track of where
+the exact closing bracket should come.
+
+This plugin also warns you of any extra "}" or ")" or "]" you typed.
+
+Customization:   
+		   - Specifying Additional Bracket-pairs.
+         		   	  User can specify additional matching pairs in
+                     the global option 'matchpairs', see :help 'matchpairs'
+                     For eg: set mps+=<:> (to include <> pair)
+                     put the above setting in .vimrc file and restart vim.
+                  - To get rid of highlighting when you quit insert
+                     mode, add this mapping in your vimrc
+                           noremap! <Esc> <Esc>:match NONE<CR>
+
+To test how this plugin works type something like
+{
+  (     ) [ ]
+  ( ( ( ) ) )
+}
+
+Happy vimming.
+
+-ncr
